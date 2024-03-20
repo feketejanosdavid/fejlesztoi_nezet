@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 80px;
+    /* background-color: rgba(43, 36, 131, 1); */
+     background-color:rgba(39, 37, 37, 0.2);
+}
+
+/*---------------NAV------------ */
+ul {
+    list-style: none;
+}
+
+.current-page {
+    opacity: 1 !important;
+    color: white !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    z-index: 100;
+    background-color: #2B2483;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    padding: 0px 30px;
+    min-height: 80px;
+}
+
+.nav {
+    transition:  all 0.3s ease-in-out;
+}
+
+.nav_list {
+    display: flex;
+    column-gap: 40px;
+}
+
+.nav_link {
+    color: #c0c0c0;
+    font-weight: bold;
+    transition: all 0.8s;
+}
+
+.nav_link:hover, .nav_link:focus {
+    color: white;
+}
+
+.logo {
+    opacity: 0.8;
+    transition: all 0.8s;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    height: 2px;
+    width: 27px;
+    background: #c0c0c0;
+    margin: 5px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.nav--open {
+    transform: translate(0) !important;
+}
+
+.hamburger--open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger--open .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger--open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.vonal {
+    color: white !important;
+}
+
+@media (max-width: 680px) {
+
+    .nav {
+        position: fixed;
+        left: 0;
+        top: 80px;
+        background-color: #2B2483;
+        width: 100%;
+        padding: 10px 0px 25px;
+        transform: translateX(-100%);
+    }
+    .vonal {
+        display: none !important; 
+    }
+    .nav_list {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .nav_link {
+        font-size: 14px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
+
+/* -------------TITLE----------- */
+
+.title {
+    z-index: 30;
+    background-image: url(images/kereszt2.jpg);
+    height: 130vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.gap {
+    height: 26%;
+}
+.title-text {
+ 
+    /* border-radius: 5px; */
+    background-color: rgba(43, 36, 131, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 50px 70px;
+    margin-left: 5%;
+    width: 50%;
+    color: white;
+    transition: all 0.5s;
+}
+.center {
+    text-align: center;
+}
+.title-text h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+.title-text p {
+    font-size: 25px;
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+}
+.button-link {
+    background-color: #008396;
+    color: white;
+    opacity: 0.7;
+    transition: all 0.5s;
+    font-weight: bold;
+    padding: 5px;
+    /* border-radius: 5px; */
+}
+.button-link:hover {
+    opacity: 1;
+    background-color: #008396;
+    color: white;
+}
+
+/* -----------PROGRAMOK------------ */
+
+.content {
+    background-color: white;
+    height: fit-content;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+    
+    margin: -10% 10%;
+}
+.programok {
+    padding: 50px 60px;
+}
+.nagycim {
+    opacity: 0.9;
+    margin-bottom: 5%;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+.KFKN {
+    margin-bottom: 10%;
+    display: flex;
+}
+.ODP {
+    display: flex;
+}
+.picture {
+    background-color: black;
+    margin-left: 60px;
+    margin-top: 40px;
+    flex: 1;
+    max-width: 400px;
+    height: 240px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+    transition: all 0.5s;
+}
+.filmszalag {
+    background-image: url(images/filmszalag.jpg);
+}
+.mozi {
+    background-image: url(images/cinema.jpg);
+}
+.text {
+    opacity: 0.8;
+    font-size: 18px;
+    flex: 4;
+    padding-left: 5%;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    transition: all 0.5s;
+}
+.programok .text:hover {
+    background-color: aliceblue;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+
+}
+.text p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.programok hr{
+    margin-bottom: 20px;
+}
+.programok .button {
+    text-align: left;
+}
+
+.kiscim {
+    font-size: 30px;
+    opacity: 0.9;
+}
+
+/* -----------------Rólunk----------------- */
+
+.rolunk {
+    margin-top: 15%;
+    background-color: rgba(43, 36, 131, 1);
+    color: white;
+    padding-bottom: 70px;
+}
+.rolunk h1{
+    padding-top: 110px;
+    text-align: center;
+    color: white !important;
+    margin-bottom: 20px;
+}
+.blue-text {
+    /* background-color: rgba(43, 36, 131, 0.9); */
+    margin: 0 10%;
+    padding: 30px 15px;
+    opacity: 0.8;
+}
+.rolunk p {
+    margin-bottom: 10px;
+}
+.image {
+    background-image: url(images/pc2.jpg);
+    height: 70vh;
+}
+.facebook {
+    margin-top: 15%;
+}
+.tamogatoink {
+    margin-top: 15%;
+}
+footer {
+    margin-top: 200px;
+    background-color:#2B2483;
+    color: white;
+    height: 200px;
+    padding: 30px;
+}
+.facebook h1 {
+    text-align: center;
+    margin-bottom:0;
+}
+.fbpost {
+    border-radius: 20px;
+    height: 400px;
+    margin: 70px 20%;
+    background-color: gray;
+    
+}
